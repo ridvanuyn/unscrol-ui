@@ -1,0 +1,114 @@
+:root {
+  --primary: #6C5CE7;
+  --primary-light: #A29BFE;
+  --primary-dark: #4834D4;
+  --accent: #00CEC9;
+  --bg: #0F0F1A;
+  --bg-card: #1A1A2E;
+  --bg-card-hover: #222240;
+  --text: #E8E8F0;
+  --text-muted: #9B9BB0;
+  --border: #2D2D4A;
+  --success: #00B894;
+  --radius: 16px;
+  --max-w: 800px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: var(--primary-light); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--accent); }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(15,15,26,.85); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 64px;
+}
+.nav-logo { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+.nav-logo span { color: var(--primary-light); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { color: var(--text-muted); font-size: 15px; font-weight: 500; }
+.nav-links a:hover { color: var(--text); }
+
+/* HERO */
+.hero {
+  padding: 160px 24px 100px;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, rgba(108,92,231,.15) 0%, transparent 60%);
+}
+.hero h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 20px; }
+.hero h1 .gradient {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 540px; margin: 0 auto 36px; }
+.hero-badges { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 50px;
+  padding: 12px 24px; font-size: 14px; font-weight: 600; color: var(--text); transition: .2s;
+}
+.badge:hover { border-color: var(--primary-light); background: var(--bg-card-hover); }
+.badge svg { width: 20px; height: 20px; }
+
+/* FEATURES */
+.features {
+  max-width: 1100px; margin: 0 auto; padding: 80px 24px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;
+}
+.feature-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 32px; transition: .25s;
+}
+.feature-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+.feature-icon { font-size: 32px; margin-bottom: 16px; }
+.feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.feature-card p { font-size: 14px; color: var(--text-muted); }
+
+/* PAGE (support, privacy) */
+.page { padding: 120px 24px 80px; max-width: var(--max-w); margin: 0 auto; }
+.page h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
+.page .subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 48px; }
+.page h2 { font-size: 22px; font-weight: 700; margin: 40px 0 12px; color: var(--text); }
+.page h3 { font-size: 18px; font-weight: 600; margin: 28px 0 8px; }
+.page p, .page li { font-size: 15px; color: var(--text-muted); margin-bottom: 12px; }
+.page ul { padding-left: 24px; }
+.page li { margin-bottom: 8px; }
+.page .card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px; margin: 24px 0;
+}
+.page .card h3 { margin-top: 0; }
+.page a { color: var(--primary-light); }
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid var(--border); padding: 40px 24px; text-align: center;
+}
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer p { color: var(--text-muted); font-size: 13px; }
+.footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 12px; }
+.footer-links a { color: var(--text-muted); font-size: 14px; }
+.footer-links a:hover { color: var(--text); }
+
+@media (max-width: 600px) {
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 13px; }
+  .features { grid-template-columns: 1fr; }
+}
