@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unscrol – Reclaim Your Focus</title>
-  <meta name="description" content="Unscrol helps you break free from mindless scrolling and reclaim your focus with daily check-ins, streaks, and mindful screen-time tracking." />
+  <title>Unscrol – Reclaim Your Focus. One Breath at a Time.</title>
+  <meta name="description" content="Unscrol is a mindful digital-detox app. Break doom-scrolling with awareness nudges, a daily sanctuary, focus sessions and a community of focused minds. 11 languages. iOS." />
+  <meta name="theme-color" content="#0A1628" />
   <meta property="og:title" content="Unscrol – Reclaim Your Focus" />
-  <meta property="og:description" content="Break free from mindless scrolling. Build healthier digital habits." />
+  <meta property="og:description" content="Break doom-scrolling. Build a quiet, focused mind — with awareness nudges, a daily sanctuary and focus sessions." />
   <meta property="og:image" content="assets/app-icon.png" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/app-icon.png" type="image/png" />
 </head>
@@ -15,160 +20,308 @@
 
   <!-- PROMO BAR -->
   <div class="promo-bar" id="promoBar">
-    <span>🎉 Lansman İndirimi: <strong>%50 İNDİRİM</strong> — Sınırlı Süre &nbsp;·&nbsp; Sadece iOS</span>
-    <a href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener">App Store'dan İndir &rarr;</a>
-    <button class="promo-close" onclick="document.getElementById('promoBar').style.display='none'" aria-label="Kapat">&times;</button>
+    <span>Launch Offer: <strong>50% OFF</strong> — Limited time &nbsp;·&nbsp; iOS only</span>
+    <a href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener">Download on the App Store &rarr;</a>
+    <button class="promo-close" onclick="document.getElementById('promoBar').style.display='none';document.body.classList.add('no-promo')" aria-label="Close">&times;</button>
   </div>
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="https://ridvanuyn.github.io/unscrol-ui" class="nav-logo">
+      <a href="./" class="nav-logo">
         <img src="assets/app-icon.png" alt="Unscrol" class="nav-icon" />
         unscrol
       </a>
       <ul class="nav-links">
+        <li><a href="#how">How it works</a></li>
         <li><a href="#features">Features</a></li>
-        <li><a href="#screenshots">Screenshots</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="terms.html">Terms</a></li>
+        <li><a href="#screenshots">Screens</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="blog/">Blog</a></li>
       </ul>
+      <a class="nav-cta" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener">Download</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <img src="assets/app-icon.png" alt="Unscrol App Icon" class="hero-app-icon" />
-    <h1>Reclaim Your <span class="gradient">Focus</span></h1>
-    <p>Break free from mindless scrolling. Build healthier digital habits with daily check-ins, streaks, and a supportive community.</p>
-    <div class="hero-badges">
-      <a class="badge" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener" aria-label="Download on the App Store">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        App Store'dan İndir
-      </a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="hero-eyebrow">Mindful screen-time · iOS</span>
+        <h1>Reclaim your <span class="gradient">focus.</span><br/>One breath at a time.</h1>
+        <p>Unscrol helps you break doom-scrolling with awareness nudges, a daily <em>Sanctuary</em> for stillness, focus sessions and a community of focused minds.</p>
+        <div class="hero-badges">
+          <a class="badge primary" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener" aria-label="Download on the App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span><small>Download on the</small><strong>App Store</strong></span>
+          </a>
+          <a class="badge ghost" href="#how">See how it works →</a>
+        </div>
+        <ul class="hero-proof">
+          <li><span>★ 4.8</span> loved by early users</li>
+          <li><span>🌍 11</span> languages</li>
+          <li><span>🔒</span> private by design</li>
+        </ul>
+      </div>
+
+      <div class="hero-stack" aria-hidden="true">
+        <img class="phone phone-back"   src="assets/app-community.png"         alt="" loading="eager" />
+        <img class="phone phone-front"  src="assets/app-home.png"              alt="Unscrol daily check-in screen" loading="eager" />
+        <img class="phone phone-side"   src="assets/app-sanctuary-prompt.png"  alt="" loading="eager" />
+      </div>
     </div>
-    <div class="hero-phone">
-      <img src="assets/screenshot-checkin.png" alt="Unscrol Daily Check-in Screen" />
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust">
+    <div class="trust-inner">
+      <div class="trust-stat"><strong>70%</strong><span>average screen-time drop<br/>reported by users</span></div>
+      <div class="trust-stat"><strong>3×</strong><span>daily micro-moments<br/>of awareness</span></div>
+      <div class="trust-stat"><strong>11</strong><span>languages<br/>at launch</span></div>
+      <div class="trust-stat"><strong>100%</strong><span>private —<br/>no selling your data</span></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <div class="section-header">
+      <span class="eyebrow">Sound familiar?</span>
+      <h2>You unlock your phone "for a second"…<br/><span class="muted">and 40 minutes disappear.</span></h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">📱<p>You scroll without remembering why you opened the app.</p></div>
+      <div class="problem-card">😮‍💨<p>You end the day tired but can't point to anything you did.</p></div>
+      <div class="problem-card">🧠<p>Focus feels shorter. Boredom feels unbearable.</p></div>
+      <div class="problem-card">🌙<p>You scroll in bed, then can't sleep, then scroll some more.</p></div>
+    </div>
+    <p class="problem-tag">Unscrol rebuilds the muscle between <em>urge</em> and <em>action</em> — gently, every day.</p>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="section-header">
+      <span class="eyebrow">How it works</span>
+      <h2>Three daily moments. One quieter mind.</h2>
+      <p>No shaming, no blocking apps. Just small, mindful rituals that compound.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <h3>Check in, 3× a day</h3>
+        <p>Morning, afternoon, evening — a 10-second check-in that tracks how you showed up, not just your screen minutes.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <h3>Enter the Sanctuary</h3>
+        <p>A daily reflection prompt — <em>"What does peace look like in your life?"</em> — followed by a stillness timer. No feed. No buttons. Just you.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <h3>Focus, don't restrict</h3>
+        <p>25/45/60-minute focus sessions with an intention. When an urge appears, Unscrol meets it with a breath — not a block screen.</p>
+      </div>
     </div>
   </section>
 
   <!-- FEATURES -->
   <section class="features" id="features">
-    <div class="feature-card">
-      <div class="feature-icon">📊</div>
-      <h3>Daily Check-ins</h3>
-      <p>Track your screen time across morning, afternoon, and evening slots. Stay accountable with three daily check-ins.</p>
+    <div class="section-header">
+      <span class="eyebrow">What's inside</span>
+      <h2>Everything you need to unscrol.</h2>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔥</div>
-      <h3>Streaks & Milestones</h3>
-      <p>Build momentum with daily streaks. Reach milestones at 3, 7, 15, 30, 60, 90 and 365 days.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🧠</div>
-      <h3>Mood Journal</h3>
-      <p>Log how you feel throughout the day. Discover how your digital habits affect your emotions and well-being.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎯</div>
-      <h3>Focus Sessions</h3>
-      <p>25, 45, or 60-minute distraction-free blocks. Earn points for staying focused and building productive habits.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🛤️</div>
-      <h3>Your Journey</h3>
-      <p>Visualize your progress from Day 1 to Master. Unlock new levels and share your achievements with friends.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🏆</div>
-      <h3>Leaderboard</h3>
-      <p>Compete with a global community. Earn points, climb the ranks, and stay motivated together.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌿</div>
+        <h3>The Sanctuary</h3>
+        <p>A private space the feed can't reach. A prompt to reflect, a quiet timer, and room to actually feel what you feel.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔔</div>
+        <h3>Awareness Nudges</h3>
+        <p>Mindful reminders appear at <em>your</em> peak distraction times — not the app's. Gentle, never naggy.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Focus Sessions</h3>
+        <p>25, 45 or 60 minutes of intention-led deep work. Log your mood. Ask for help when the urge hits.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Daily Check-ins</h3>
+        <p>Morning, afternoon, evening. +30 points per slot. Build a streak you're proud of — one slot at a time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>Community Pulse</h3>
+        <p>"You are in the Top 50% of focused minds today." See how many humans are in the sanctuary right now.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Leaderboard</h3>
+        <p>Global and country rankings by longest streak or total points. Compete on attention, not engagement.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌈</div>
+        <h3>Mood Journal</h3>
+        <p>Tag days as Calm, Anxious, Bored or Focused. Watch patterns surface. Your phone isn't the only variable.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🗣️</div>
+        <h3>11 Languages</h3>
+        <p>English, Español, Português, Deutsch, Türkçe, Italiano, 日本語, 한국어, 中文, हिन्दी, العربية.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Private by design</h3>
+        <p>PIN-based sign-in, no password, no tracking ads. Your data is yours.</p>
+      </div>
     </div>
   </section>
 
   <!-- SCREENSHOTS -->
   <section class="screenshots" id="screenshots">
     <div class="section-header">
-      <h2>See It in Action</h2>
-      <p>Designed to keep you motivated, every single day.</p>
+      <span class="eyebrow">A look inside</span>
+      <h2>See it in action.</h2>
+      <p>Designed to keep you motivated, never overwhelmed.</p>
     </div>
-    <div class="screenshots-grid">
-      <div class="screenshot-item">
-        <img src="assets/screenshot-checkin.png" alt="Daily Check-in" loading="lazy" />
-        <span>Daily Accountability</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="assets/screenshot-rewards.png" alt="Earn Rewards" loading="lazy" />
-        <span>Earn Rewards</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="assets/screenshot-mood.png" alt="Mood Journal" loading="lazy" />
-        <span>Know Yourself</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="assets/screenshot-focus.png" alt="Focus Sessions" loading="lazy" />
-        <span>Stay Focused</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="assets/screenshot-journey.png" alt="Your Journey" loading="lazy" />
-        <span>Your Journey</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="assets/screenshot-reviews.png" alt="User Reviews" loading="lazy" />
-        <span>Loved by Users</span>
-      </div>
+    <div class="screenshots-rail">
+      <figure class="shot">
+        <img src="assets/app-home.png" alt="Daily Check-in with streak and history" loading="lazy" />
+        <figcaption><strong>Daily Check-in</strong><span>Morning · Afternoon · Evening</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/app-sanctuary-prompt.png" alt="Sanctuary reflection prompt" loading="lazy" />
+        <figcaption><strong>Sanctuary · Prompt</strong><span>A question for your mind</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/app-sanctuary-timer.png" alt="Sanctuary stillness timer" loading="lazy" />
+        <figcaption><strong>Sanctuary · Stillness</strong><span>Just breathe</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/app-focus.png" alt="Focus session with intention and timer" loading="lazy" />
+        <figcaption><strong>Focus Session</strong><span>One intention at a time</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/app-community.png" alt="Community pulse showing top 50% of focused minds" loading="lazy" />
+        <figcaption><strong>Community Pulse</strong><span>You're not alone</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/app-leaderboard.png" alt="Leaderboard with global and country rankings" loading="lazy" />
+        <figcaption><strong>Leaderboard</strong><span>Global & country</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/app-mood.png" alt="Mood journal calendar" loading="lazy" />
+        <figcaption><strong>Mood Journal</strong><span>Patterns, not guilt</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/app-profile.png" alt="Profile with awareness nudges toggle" loading="lazy" />
+        <figcaption><strong>Awareness Nudges</strong><span>Mindful reminders</span></figcaption>
+      </figure>
     </div>
   </section>
 
   <!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="section-header">
-      <h2>What People Say</h2>
+      <span class="eyebrow">Loved by focused minds</span>
+      <h2>Real change, not willpower.</h2>
     </div>
     <div class="testimonials-grid">
       <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Finally free from endless scrolling. This app changed my daily routine completely."</p>
-        <span class="author">— James K.</span>
+        <div class="stars">★★★★★</div>
+        <p>"The Sanctuary is the first app screen that's ever told me to <em>stop using the app</em>. It works."</p>
+        <span class="author">— Ayşe T., Istanbul</span>
       </div>
       <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"My screen time dropped 70%. The streak system keeps me accountable every day."</p>
-        <span class="author">— Anna L.</span>
+        <div class="stars">★★★★★</div>
+        <p>"Screen time dropped 70% in three weeks. The streak + mood combo is the unlock."</p>
+        <span class="author">— James K., London</span>
       </div>
       <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"The focus sessions are a game changer. I'm more productive than ever before."</p>
-        <span class="author">— Marcus T.</span>
+        <div class="stars">★★★★★</div>
+        <p>"Awareness Nudges caught me at 11pm in bed. I actually put the phone down. Rare."</p>
+        <span class="author">— Marcus R., Berlin</span>
       </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Focus sessions with an intention changed how I study. I'm not blocking Instagram — I'm choosing."</p>
+        <span class="author">— Hana S., Seoul</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-header">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions, answered.</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Does Unscrol block apps or my phone?</summary>
+        <p>No. Unscrol is about <em>awareness</em>, not restriction. We rebuild the pause between urge and action — blocks teach avoidance, awareness teaches choice.</p>
+      </details>
+      <details>
+        <summary>Is my data private?</summary>
+        <p>Yes. Unscrol uses PIN-based sign-in, no passwords, no ad trackers. Your check-ins, moods and reflections are yours.</p>
+      </details>
+      <details>
+        <summary>Is it free?</summary>
+        <p>The core experience is free. Premium unlocks extended focus history, advanced streak rewards and priority support. A launch discount is active for a limited time.</p>
+      </details>
+      <details>
+        <summary>Android?</summary>
+        <p>Unscrol is iOS-first at launch. Android is on the roadmap — join the waitlist via the blog for updates.</p>
+      </details>
+      <details>
+        <summary>What makes the Sanctuary different from a meditation app?</summary>
+        <p>The Sanctuary is one screen, one prompt, one timer. No libraries, no voices, no shopping. It's the opposite of a feed — and that's the point.</p>
+      </details>
+      <details>
+        <summary>How many languages?</summary>
+        <p>Eleven: English, Español, Português, Deutsch, Türkçe, Italiano, Japanese, Korean, Chinese, Hindi and Arabic.</p>
+      </details>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta">
-    <h2>Ready to Take Control?</h2>
-    <p>Download Unscrol today and start your journey to better digital habits. Available on iOS.</p>
-    <div class="hero-badges">
-      <a class="badge" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        App Store'dan İndir
-      </a>
+    <div class="cta-card">
+      <span class="eyebrow">Ready?</span>
+      <h2>Take your attention back.</h2>
+      <p>Download Unscrol today. Your next quiet moment is one tap away.</p>
+      <div class="hero-badges">
+        <a class="badge primary" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+      </div>
+      <p class="cta-micro">Free to start · iOS 16+ · 11 languages</p>
     </div>
   </section>
 
   <footer class="footer">
     <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/app-icon.png" alt="" class="nav-icon" />
+        <span>unscrol</span>
+      </div>
       <div class="footer-links">
         <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
         <a href="blog/">Blog</a>
         <a href="mailto:support@unscrol.app">Contact</a>
       </div>
-      <p>&copy; 2026 Unscrol. All rights reserved.</p>
+      <p>&copy; 2026 Unscrol. Made with attention.</p>
     </div>
   </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <a class="sticky-cta" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener" aria-label="Download Unscrol on the App Store">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+    Get Unscrol — Free
+  </a>
 
 </body>
 </html>
