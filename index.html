@@ -21,7 +21,7 @@
   <!-- PROMO BAR -->
   <div class="promo-bar" id="promoBar">
     <span>Launch Offer: <strong>50% OFF</strong> — Limited time &nbsp;·&nbsp; iOS only</span>
-    <a href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener">Download on the App Store &rarr;</a>
+    <a href="https://apps.apple.com/tr/app/zen-focus-mode-tracker-unscrol/id6759997244" target="_blank" rel="noopener">Download on the App Store &rarr;</a>
     <button class="promo-close" onclick="document.getElementById('promoBar').style.display='none';document.body.classList.add('no-promo')" aria-label="Close">&times;</button>
   </div>
 
@@ -34,11 +34,13 @@
       <ul class="nav-links">
         <li><a href="#how">How it works</a></li>
         <li><a href="#features">Features</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#widgets">Widgets</a></li>
         <li><a href="#screenshots">Screens</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="blog/">Blog</a></li>
       </ul>
-      <a class="nav-cta" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener">Download</a>
+      <a class="nav-cta" href="https://apps.apple.com/tr/app/zen-focus-mode-tracker-unscrol/id6759997244" target="_blank" rel="noopener">Download</a>
     </div>
   </nav>
 
@@ -50,7 +52,7 @@
         <h1>Reclaim your <span class="gradient">focus.</span><br/>One breath at a time.</h1>
         <p>Unscrol helps you break doom-scrolling with awareness nudges, a daily <em>Sanctuary</em> for stillness, focus sessions and a community of focused minds.</p>
         <div class="hero-badges">
-          <a class="badge primary" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <a class="badge primary" href="https://apps.apple.com/tr/app/zen-focus-mode-tracker-unscrol/id6759997244" target="_blank" rel="noopener" aria-label="Download on the App Store">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
             <span><small>Download on the</small><strong>App Store</strong></span>
           </a>
@@ -130,6 +132,21 @@
     </div>
     <div class="features-grid">
       <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>80+ Challenges</h3>
+        <p>Real-life quests across 8 categories — calm, move, learn, create, spiritual, morning, evening. Build daily streaks, earn badge milestones, and double your points as you go.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📲</div>
+        <h3>Home-Screen Widgets</h3>
+        <p>17 widgets keep your streak, focus and journey one glance away — tap any to jump straight into a session or a challenge.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛟</div>
+        <h3>Streak Saver</h3>
+        <p>Missed a day? Subscribers can restore it and keep the momentum alive — alongside a 14-week journey heatmap that fills in as you show up.</p>
+      </div>
+      <div class="feature-card">
         <div class="feature-icon">🌿</div>
         <h3>The Sanctuary</h3>
         <p>A private space the feed can't reach. A prompt to reflect, a quiet timer, and room to actually feel what you feel.</p>
@@ -176,6 +193,999 @@
       </div>
     </div>
   </section>
+
+  <!-- CHALLENGES -->
+<style>
+  .ch-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 88px 24px;
+  }
+  .ch-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .ch-header h2 {
+    font-size: clamp(28px, 3.6vw, 42px);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .ch-header h2 .ch-muted { color: var(--text-muted); font-weight: 600; }
+  .ch-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Category chips */
+  .ch-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+  .ch-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+  }
+  .ch-chip:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+  }
+  .ch-chip .ch-emoji { font-size: 16px; line-height: 1; }
+
+  /* Example challenge cards */
+  .ch-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 52px;
+  }
+  .ch-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    text-align: left;
+    transition: border-color .2s ease, transform .2s ease;
+  }
+  .ch-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-3px);
+  }
+  .ch-card-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .ch-icon {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  .ch-icon-green { background: var(--primary-soft); color: var(--primary); }
+  .ch-icon-blue  { background: rgba(96,165,250,.16); color: var(--accent); }
+  .ch-icon-purple{ background: rgba(139,92,246,.16); color: #A78BFA; }
+  .ch-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .ch-card-meta {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 3px;
+  }
+
+  /* Progress bar */
+  .ch-bar {
+    height: 8px;
+    width: 100%;
+    background: rgba(255,255,255,.08);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .ch-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  }
+  .ch-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-top: 10px;
+  }
+  .ch-bar-label strong { color: var(--text); }
+
+  /* Day squares */
+  .ch-squares {
+    display: flex;
+    gap: 7px;
+  }
+  .ch-sq {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid var(--border);
+  }
+  .ch-sq.ch-on {
+    background: rgba(96,165,250,.28);
+    border-color: rgba(96,165,250,.55);
+  }
+
+  /* Streak row */
+  .ch-streak {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(251,146,60,.10);
+    border: 1px solid rgba(251,146,60,.25);
+    border-radius: var(--radius-sm);
+  }
+  .ch-streak .ch-fire { font-size: 18px; line-height: 1; }
+  .ch-streak-text { font-size: 14px; font-weight: 700; color: var(--text); }
+  .ch-streak-text span { color: #FB923C; }
+
+  /* Feature pills */
+  .ch-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 14px;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .ch-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 18px;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+  .ch-feature-dot {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    border-radius: 9px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .ch-feature h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 3px;
+  }
+  .ch-feature p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .ch-feature p b { color: var(--text); font-weight: 700; }
+
+  @media (max-width: 600px) {
+    .ch-section { padding: 64px 20px; }
+    .ch-cards { grid-template-columns: 1fr; }
+    .ch-features { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="ch-section" id="challenges">
+  <div class="ch-header">
+    <span class="eyebrow">Build the right habits</span>
+    <h2>80+ real-life challenges. <span class="ch-muted">Not endless feeds.</span></h2>
+    <p>Swap the doom-scroll for something that actually moves you forward. Pick a challenge, show up daily, and watch small streaks grow into lasting habits.</p>
+  </div>
+
+  <div class="ch-chips">
+    <span class="ch-chip"><span class="ch-emoji">🌱</span>Calm</span>
+    <span class="ch-chip"><span class="ch-emoji">🏃</span>Move</span>
+    <span class="ch-chip"><span class="ch-emoji">📚</span>Learn</span>
+    <span class="ch-chip"><span class="ch-emoji">🎨</span>Create</span>
+    <span class="ch-chip"><span class="ch-emoji">🧠</span>Brain</span>
+    <span class="ch-chip"><span class="ch-emoji">🕌</span>Spiritual</span>
+    <span class="ch-chip"><span class="ch-emoji">🌅</span>Morning</span>
+    <span class="ch-chip"><span class="ch-emoji">🌙</span>Evening</span>
+  </div>
+
+  <div class="ch-cards">
+    <!-- Card 1: progress bar -->
+    <div class="ch-card">
+      <div class="ch-card-top">
+        <div class="ch-icon ch-icon-green">🎯</div>
+        <div>
+          <div class="ch-card-title">30 Days Focus</div>
+          <div class="ch-card-meta">Deep-work, no distractions</div>
+        </div>
+      </div>
+      <div class="ch-bar"><div class="ch-bar-fill" style="width:73%"></div></div>
+      <div class="ch-bar-label"><span>73% complete</span><strong>Day 22 / 30</strong></div>
+    </div>
+
+    <!-- Card 2: day squares -->
+    <div class="ch-card">
+      <div class="ch-card-top">
+        <div class="ch-icon ch-icon-blue">🌅</div>
+        <div>
+          <div class="ch-card-title">7 Days No Morning Phone</div>
+          <div class="ch-card-meta">Start the day on your terms</div>
+        </div>
+      </div>
+      <div class="ch-squares">
+        <span class="ch-sq ch-on"></span>
+        <span class="ch-sq ch-on"></span>
+        <span class="ch-sq ch-on"></span>
+        <span class="ch-sq ch-on"></span>
+        <span class="ch-sq"></span>
+        <span class="ch-sq"></span>
+        <span class="ch-sq"></span>
+      </div>
+      <div class="ch-bar-label"><span>4 of 7 mornings won</span><strong>Keep going</strong></div>
+    </div>
+
+    <!-- Card 3: streak -->
+    <div class="ch-card">
+      <div class="ch-card-top">
+        <div class="ch-icon ch-icon-purple">📖</div>
+        <div>
+          <div class="ch-card-title">Read 10 Minutes</div>
+          <div class="ch-card-meta">A page beats a feed</div>
+        </div>
+      </div>
+      <div class="ch-streak">
+        <span class="ch-fire">🔥</span>
+        <span class="ch-streak-text"><span>12-day</span> streak</span>
+      </div>
+      <div class="ch-bar-label"><span>Best streak yet</span><strong>+ today</strong></div>
+    </div>
+  </div>
+
+  <div class="ch-features">
+    <div class="ch-feature">
+      <div class="ch-feature-dot">🔥</div>
+      <div>
+        <h3>Daily streaks</h3>
+        <p>Show up once a day. The streak does the motivating for you.</p>
+      </div>
+    </div>
+    <div class="ch-feature">
+      <div class="ch-feature-dot">🏅</div>
+      <div>
+        <h3>Badge milestones</h3>
+        <p>Earn badges at <b>7 → 21 → 45 → 75 → 100</b> days of consistency.</p>
+      </div>
+    </div>
+    <div class="ch-feature">
+      <div class="ch-feature-dot">⚡</div>
+      <div>
+        <h3>Progressive tiers</h3>
+        <p>Climb tiers that <b>double your points</b> the longer you stay on track.</p>
+      </div>
+    </div>
+    <div class="ch-feature">
+      <div class="ch-feature-dot">🛟</div>
+      <div>
+        <h3>Streak Saver</h3>
+        <p>Life happens. Restore one missed day and keep your momentum alive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- WIDGETS -->
+<style>
+  /* ====== Home-screen Widgets section — scoped (wg-) ====== */
+  .wg-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 96px 24px;
+  }
+  .wg-header {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 56px;
+  }
+  .wg-header h2 {
+    font-size: clamp(28px, 4.5vw, 40px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    color: var(--text);
+    margin: 16px 0 16px;
+  }
+  .wg-header p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .wg-header p em { color: var(--primary); font-style: normal; font-weight: 600; }
+
+  /* ---- Widget grid ---- */
+  .wg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    align-items: stretch;
+  }
+  .wg-grid > .wg-wide { grid-column: span 2; }
+
+  /* ---- Base tile (mimics an iOS widget) ---- */
+  .wg-tile {
+    position: relative;
+    background: linear-gradient(160deg, var(--bg-card), var(--bg-2));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    min-height: 158px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    cursor: pointer;
+  }
+  .wg-tile:hover {
+    transform: translateY(-4px);
+    border-color: rgba(74,222,128,.35);
+    box-shadow: 0 18px 44px rgba(0,0,0,.5), 0 0 0 1px var(--primary-soft);
+  }
+  .wg-tile .wg-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: auto;
+  }
+
+  /* deep-link hint badge */
+  .wg-tile::after {
+    content: "↗";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 22px;
+    height: 22px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--primary);
+    background: var(--primary-soft);
+    opacity: 0;
+    transform: translateY(-3px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .wg-tile:hover::after { opacity: 1; transform: translateY(0); }
+
+  /* ===== STREAK tile ===== */
+  .wg-streak .wg-streak-num {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.03em;
+    color: var(--text);
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .wg-streak .wg-fire { font-size: 30px; line-height: 1; }
+  .wg-streak .wg-streak-sub { margin-top: 8px; }
+
+  /* ===== FOCUS ring tile ===== */
+  .wg-focus { align-items: center; justify-content: center; }
+  .wg-ring {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: conic-gradient(var(--primary) 0% 70%, rgba(255,255,255,.07) 70% 100%);
+    display: grid;
+    place-items: center;
+    margin: 6px auto 12px;
+  }
+  .wg-ring::before {
+    content: "";
+    position: absolute;
+  }
+  .wg-ring-inner {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--bg-2);
+    display: grid;
+    place-items: center;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+  }
+  .wg-ring-inner b {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -.02em;
+  }
+  .wg-ring-inner span { font-size: 9px; color: var(--text-muted); font-weight: 600; }
+  .wg-focus .wg-label { text-align: center; margin-top: 0; }
+
+  /* ===== JOURNEY heatmap tile ===== */
+  .wg-heat-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 3px;
+    margin: 2px 0 12px;
+  }
+  .wg-heat-grid i {
+    aspect-ratio: 1;
+    border-radius: 3px;
+    background: var(--primary);
+    display: block;
+  }
+
+  /* ===== QUOTE tile ===== */
+  .wg-quote .wg-q-text {
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+    max-width: 78%;
+  }
+  .wg-quote .wg-q-mark {
+    position: absolute;
+    right: 8px;
+    bottom: -18px;
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--primary);
+    opacity: .10;
+    z-index: 0;
+  }
+  .wg-quote .wg-label { margin-top: 14px; }
+
+  /* ===== DAILY OVERVIEW tile (wide) ===== */
+  .wg-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    font-size: 12px;
+    font-weight: 700;
+    color: #2A1606;
+    background: linear-gradient(135deg, #FBBF24, #F97316);
+    padding: 5px 11px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .wg-rows { display: flex; flex-direction: column; gap: 8px; }
+  .wg-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,.04);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 9px 12px;
+  }
+  .wg-row span { font-size: 13px; color: var(--text); font-weight: 500; }
+  .wg-tag {
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+  .wg-tag.done { color: var(--primary); background: var(--primary-soft); }
+  .wg-tag.active { color: var(--accent); background: rgba(96,165,250,.14); }
+
+  /* ===== WEEKLY DISCIPLINE tile ===== */
+  .wg-weekly { justify-content: flex-end; }
+  .wg-bars {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    align-items: end;
+    height: 78px;
+    margin-bottom: 12px;
+  }
+  .wg-bar { display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; justify-content: flex-end; }
+  .wg-bar i {
+    width: 100%;
+    border-radius: 5px;
+    background: rgba(255,255,255,.07);
+    display: block;
+    position: relative;
+  }
+  .wg-bar.on i { background: linear-gradient(180deg, var(--primary), var(--primary-dark)); }
+  .wg-bar.on i::after {
+    content: "✓";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: var(--primary);
+    font-weight: 800;
+  }
+  .wg-bar small { font-size: 9px; color: var(--text-muted); font-weight: 600; }
+
+  /* ===== caption chip list ===== */
+  .wg-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+    margin: 44px auto 0;
+    max-width: 760px;
+  }
+  .wg-chip {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 7px 14px;
+    transition: color .2s, border-color .2s, background .2s;
+  }
+  .wg-chip:hover { color: var(--text); border-color: rgba(74,222,128,.35); background: var(--bg-card-hover); }
+
+  .wg-deeplink {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 28px auto 0;
+    max-width: 560px;
+  }
+  .wg-deeplink em { color: var(--primary); font-style: normal; font-weight: 600; }
+
+  /* ---- responsive reflow ---- */
+  @media (max-width: 720px) {
+    .wg-grid { grid-template-columns: repeat(2, 1fr); }
+    .wg-grid > .wg-wide { grid-column: span 2; }
+  }
+  @media (max-width: 440px) {
+    .wg-section { padding: 72px 18px; }
+    .wg-grid { grid-template-columns: 1fr; }
+    .wg-grid > .wg-wide { grid-column: span 1; }
+  }
+</style>
+
+<section class="wg-section" id="widgets">
+  <div class="wg-header">
+    <span class="eyebrow">On your home screen</span>
+    <h2>Your progress, always in sight.</h2>
+    <p>
+      Pick from <em>17 home-screen widgets</em> and keep your streak, focus and journey
+      one glance away. Tap any widget to jump straight into the app — into a
+      focus session, a challenge, or your journey.
+    </p>
+  </div>
+
+  <div class="wg-grid">
+
+    <!-- STREAK -->
+    <div class="wg-tile wg-streak">
+      <div class="wg-streak-num">12 <span class="wg-fire">🔥</span></div>
+      <div class="wg-label wg-streak-sub">Days active</div>
+    </div>
+
+    <!-- FOCUS ring -->
+    <div class="wg-tile wg-focus">
+      <div class="wg-ring">
+        <div class="wg-ring-inner">
+          <b>70%</b>
+          <span>today</span>
+        </div>
+      </div>
+      <div class="wg-label">Focus</div>
+    </div>
+
+    <!-- JOURNEY heatmap -->
+    <div class="wg-tile wg-journey">
+      <div class="wg-heat-grid">
+        <i style="opacity:.18"></i><i style="opacity:.55"></i><i style="opacity:.30"></i><i style="opacity:.85"></i><i style="opacity:.12"></i><i style="opacity:.65"></i><i style="opacity:.40"></i><i style="opacity:.90"></i><i style="opacity:.22"></i><i style="opacity:.50"></i>
+        <i style="opacity:.70"></i><i style="opacity:.15"></i><i style="opacity:.95"></i><i style="opacity:.35"></i><i style="opacity:.60"></i><i style="opacity:.25"></i><i style="opacity:.80"></i><i style="opacity:.45"></i><i style="opacity:.10"></i><i style="opacity:.75"></i>
+        <i style="opacity:.30"></i><i style="opacity:.88"></i><i style="opacity:.20"></i><i style="opacity:.55"></i><i style="opacity:.92"></i><i style="opacity:.40"></i><i style="opacity:.14"></i><i style="opacity:.68"></i><i style="opacity:.50"></i><i style="opacity:.28"></i>
+        <i style="opacity:.62"></i><i style="opacity:.18"></i><i style="opacity:.78"></i><i style="opacity:.42"></i><i style="opacity:.95"></i><i style="opacity:.22"></i><i style="opacity:.58"></i><i style="opacity:.35"></i><i style="opacity:.84"></i><i style="opacity:.16"></i>
+        <i style="opacity:.48"></i><i style="opacity:.72"></i><i style="opacity:.26"></i><i style="opacity:.90"></i><i style="opacity:.34"></i><i style="opacity:.60"></i><i style="opacity:.12"></i><i style="opacity:.80"></i><i style="opacity:.44"></i><i style="opacity:.66"></i>
+        <i style="opacity:.20"></i><i style="opacity:.86"></i><i style="opacity:.38"></i><i style="opacity:.54"></i><i style="opacity:.15"></i><i style="opacity:.94"></i><i style="opacity:.30"></i><i style="opacity:.62"></i><i style="opacity:.48"></i><i style="opacity:.24"></i>
+        <i style="opacity:.70"></i><i style="opacity:.32"></i><i style="opacity:.88"></i><i style="opacity:.18"></i><i style="opacity:.56"></i><i style="opacity:.42"></i><i style="opacity:.76"></i><i style="opacity:.14"></i><i style="opacity:.92"></i><i style="opacity:.50"></i>
+      </div>
+      <div class="wg-label">Journey</div>
+    </div>
+
+    <!-- QUOTE -->
+    <div class="wg-tile wg-quote">
+      <div class="wg-q-text">“The phone can wait. Your life can’t.”</div>
+      <span class="wg-q-mark">”</span>
+      <div class="wg-label">Daily quote</div>
+    </div>
+
+    <!-- DAILY OVERVIEW (wide) -->
+    <div class="wg-tile wg-wide wg-overview">
+      <span class="wg-pill">🔥 12 Day Streak</span>
+      <div class="wg-rows">
+        <div class="wg-row">
+          <span>Solve 1 Sudoku</span>
+          <span class="wg-tag done">Done</span>
+        </div>
+        <div class="wg-row">
+          <span>10-min Reading</span>
+          <span class="wg-tag active">Active</span>
+        </div>
+      </div>
+      <div class="wg-label" style="margin-top:14px;">Daily overview</div>
+    </div>
+
+    <!-- WEEKLY DISCIPLINE -->
+    <div class="wg-tile wg-weekly">
+      <div class="wg-bars">
+        <div class="wg-bar on"><i style="height:80%"></i><small>M</small></div>
+        <div class="wg-bar on"><i style="height:65%"></i><small>T</small></div>
+        <div class="wg-bar"><i style="height:30%"></i><small>W</small></div>
+        <div class="wg-bar on"><i style="height:90%"></i><small>T</small></div>
+        <div class="wg-bar on"><i style="height:72%"></i><small>F</small></div>
+        <div class="wg-bar"><i style="height:42%"></i><small>S</small></div>
+        <div class="wg-bar"><i style="height:20%"></i><small>S</small></div>
+      </div>
+      <div class="wg-label">Weekly discipline</div>
+    </div>
+
+  </div>
+
+  <div class="wg-types">
+    <span class="wg-chip">Streak</span>
+    <span class="wg-chip">Focus</span>
+    <span class="wg-chip">Check-in</span>
+    <span class="wg-chip">Daily Overview</span>
+    <span class="wg-chip">Weekly</span>
+    <span class="wg-chip">Journey</span>
+    <span class="wg-chip">Quote</span>
+    <span class="wg-chip">1-Min Awareness</span>
+    <span class="wg-chip">Breath</span>
+    <span class="wg-chip">Community</span>
+    <span class="wg-chip">Score</span>
+    <span class="wg-chip">Active Quest</span>
+    <span class="wg-chip">My Challenges</span>
+    <span class="wg-chip">Leaderboard</span>
+    <span class="wg-chip">Mindful Minutes</span>
+    <span class="wg-chip">Today’s Goal</span>
+    <span class="wg-chip">Gratitude</span>
+  </div>
+
+  <p class="wg-deeplink">
+    Every widget is a shortcut — tap it and Unscrol opens <em>exactly the right screen</em>,
+    from a focus session to your current challenge.
+  </p>
+</section>
+
+  <!-- JOURNEY -->
+<style>
+  .jr-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 96px 24px;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: var(--text);
+    text-align: center;
+  }
+  .jr-header {
+    max-width: 640px;
+    margin: 0 auto 56px;
+  }
+  .jr-header .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: var(--primary-soft);
+    padding: 7px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  .jr-header h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.15;
+    font-weight: 800;
+    margin: 0 0 18px;
+    letter-spacing: -.02em;
+  }
+  .jr-header p {
+    font-size: clamp(15px, 2.2vw, 17px);
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* ---- Heatmap card ---- */
+  .jr-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-align: left;
+    box-shadow: 0 24px 60px rgba(0,0,0,.35);
+  }
+  .jr-card-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+  .jr-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .jr-card-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .jr-card-sub b { color: var(--primary); font-weight: 700; }
+
+  .jr-grid-wrap { overflow-x: auto; padding-bottom: 4px; }
+  .jr-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 5px;
+    min-width: 560px;
+  }
+  .jr-cell {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    min-width: 14px;
+    border-radius: 4px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.03);
+  }
+  /* intensity scale */
+  .jr-l1 { background: rgba(74,222,128,.20); border-color: rgba(74,222,128,.18); }
+  .jr-l2 { background: rgba(74,222,128,.42); border-color: rgba(74,222,128,.30); }
+  .jr-l3 { background: rgba(74,222,128,.68); border-color: rgba(74,222,128,.40); }
+  .jr-l4 { background: var(--primary); border-color: var(--primary-dark);
+           box-shadow: 0 0 8px rgba(74,222,128,.45); }
+
+  .jr-legend {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: flex-end;
+    margin-top: 18px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .jr-legend .jr-cell {
+    width: 13px; height: 13px; min-width: 13px; aspect-ratio: auto;
+  }
+
+  /* ---- supporting pills ---- */
+  .jr-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin: 28px 0 0;
+  }
+  .jr-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 9px 16px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .jr-pill .jr-dot {
+    color: var(--primary);
+    font-size: 15px;
+  }
+  .jr-pill .jr-badges { color: var(--accent); font-weight: 700; }
+
+  /* ---- Streak Saver card ---- */
+  .jr-saver {
+    position: relative;
+    overflow: hidden;
+    margin-top: 24px;
+    text-align: left;
+    border-radius: var(--radius);
+    border: 1px solid rgba(74,222,128,.28);
+    background:
+      radial-gradient(120% 140% at 100% 0%, rgba(74,222,128,.16), transparent 55%),
+      linear-gradient(180deg, var(--bg-2), var(--bg-card));
+    padding: 30px 32px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .jr-shield {
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    background: var(--primary-soft);
+    border: 1px solid rgba(74,222,128,.35);
+    box-shadow: 0 0 24px rgba(74,222,128,.25);
+  }
+  .jr-shield svg { width: 34px; height: 34px; }
+  .jr-saver-body { flex: 1 1 auto; min-width: 0; }
+  .jr-saver-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+  .jr-saver h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 10px;
+    letter-spacing: -.01em;
+  }
+  .jr-saver h3 .jr-spark { color: var(--primary); }
+  .jr-saver p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0 0 18px;
+  }
+  .jr-allow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .jr-allow span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    background: rgba(74,222,128,.10);
+    border: 1px solid rgba(74,222,128,.22);
+    border-radius: var(--radius-sm);
+    padding: 8px 13px;
+  }
+  .jr-allow b { color: var(--primary); }
+
+  @media (max-width: 560px) {
+    .jr-saver { flex-direction: column; gap: 16px; padding: 26px 22px; }
+    .jr-card { padding: 22px 18px; }
+    .jr-legend { justify-content: flex-start; }
+  }
+</style>
+
+<section class="jr-section" id="journey">
+  <div class="jr-header">
+    <span class="eyebrow">See your progress</span>
+    <h2>Your journey, one square at a time.</h2>
+    <p>A 14-week, GitHub-style contribution heatmap that fills in as you check in and complete challenges — a calm, motivating record of showing up, day after day.</p>
+  </div>
+
+  <div class="jr-card">
+    <div class="jr-card-top">
+      <p class="jr-card-title">Contribution heatmap</p>
+      <p class="jr-card-sub"><b>312</b> mindful days this season · longest streak <b>23</b></p>
+    </div>
+
+    <div class="jr-grid-wrap" role="img" aria-label="14-week contribution heatmap showing daily check-ins and completed challenges">
+      <div class="jr-grid">
+        <!-- Week 1 -->
+        <span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell"></span>
+        <!-- Week 2 -->
+        <span class="jr-cell jr-l1"></span><span class="jr-cell"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l3"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span>
+        <!-- Week 3 -->
+        <span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span>
+        <!-- Week 4 -->
+        <span class="jr-cell jr-l1"></span><span class="jr-cell jr-l3"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l4"></span>
+        <!-- Week 5 -->
+        <span class="jr-cell"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell"></span>
+        <!-- Week 6 -->
+        <span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l3"></span><span class="jr-cell jr-l1"></span>
+        <!-- Week 7 -->
+        <span class="jr-cell jr-l2"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span>
+        <!-- Week 8 -->
+        <span class="jr-cell jr-l4"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span>
+        <!-- Week 9 -->
+        <span class="jr-cell jr-l1"></span><span class="jr-cell"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l3"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span>
+        <!-- Week 10 -->
+        <span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell"></span><span class="jr-cell"></span><span class="jr-cell jr-l1"></span>
+        <!-- Week 11 -->
+        <span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l3"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span>
+        <!-- Week 12 -->
+        <span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l4"></span><span class="jr-cell jr-l1"></span>
+        <!-- Week 13 -->
+        <span class="jr-cell jr-l2"></span><span class="jr-cell jr-l3"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span>
+        <!-- Week 14 -->
+        <span class="jr-cell jr-l3"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l4"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span><span class="jr-cell jr-l2"></span><span class="jr-cell jr-l1"></span>
+      </div>
+    </div>
+
+    <div class="jr-legend">
+      <span>Less</span>
+      <span class="jr-cell"></span>
+      <span class="jr-cell jr-l1"></span>
+      <span class="jr-cell jr-l2"></span>
+      <span class="jr-cell jr-l3"></span>
+      <span class="jr-cell jr-l4"></span>
+      <span>More</span>
+    </div>
+  </div>
+
+  <div class="jr-pills">
+    <span class="jr-pill"><span class="jr-dot">+</span> Full week = <b style="color:var(--primary)">+100 points</b></span>
+    <span class="jr-pill">Milestone badges <span class="jr-badges">7 → 21 → 45 → 75 → 100</span> days</span>
+  </div>
+
+  <div class="jr-saver">
+    <div class="jr-shield" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.5 4.5 5.5v6c0 4.6 3.2 8.4 7.5 10 4.3-1.6 7.5-5.4 7.5-10v-6L12 2.5Z"
+              fill="rgba(74,222,128,.18)" stroke="#4ADE80" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="m8.6 12.1 2.3 2.3 4.5-4.7" stroke="#4ADE80" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="jr-saver-body">
+      <span class="jr-saver-tag">Premium perk</span>
+      <h3>Streak Saver <span class="jr-spark">&#10024;</span></h3>
+      <p>Life happens. Miss a day and a Streak Saver quietly restores it — so your streak, your momentum, and that hard-earned heatmap stay alive. No guilt, no starting over. Just keep going.</p>
+      <div class="jr-allow">
+        <span>Monthly · <b>1 / week</b></span>
+        <span>Monthly · <b>3 / month</b></span>
+        <span>Yearly · <b>7 / month</b></span>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- SCREENSHOTS -->
   <section class="screenshots" id="screenshots">
@@ -291,7 +1301,7 @@
       <h2>Take your attention back.</h2>
       <p>Download Unscrol today. Your next quiet moment is one tap away.</p>
       <div class="hero-badges">
-        <a class="badge primary" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener">
+        <a class="badge primary" href="https://apps.apple.com/tr/app/zen-focus-mode-tracker-unscrol/id6759997244" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           <span><small>Download on the</small><strong>App Store</strong></span>
         </a>
@@ -318,7 +1328,7 @@
   </footer>
 
   <!-- STICKY MOBILE CTA -->
-  <a class="sticky-cta" href="https://apps.apple.com/app/unscrol/id6746792847" target="_blank" rel="noopener" aria-label="Download Unscrol on the App Store">
+  <a class="sticky-cta" href="https://apps.apple.com/tr/app/zen-focus-mode-tracker-unscrol/id6759997244" target="_blank" rel="noopener" aria-label="Download Unscrol on the App Store">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
     Get Unscrol — Free
   </a>
